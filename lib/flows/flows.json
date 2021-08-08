@@ -86,8 +86,7 @@
         "y": 200,
         "wires": [
             [
-                "78818fdeea21a879",
-                "2797ff6f467da748"
+                "78818fdeea21a879"
             ]
         ]
     },
@@ -205,42 +204,50 @@
         ]
     },
     {
-        "id": "e44e3290cc489702",
-        "type": "log-elk",
+        "id": "0c7130b9498cc216",
+        "type": "http in",
         "z": "9ab91bb2.9ce5d8",
         "name": "",
-        "logger": "eb177b7a3a450978",
-        "complete": "payload",
-        "loglevel": "debug",
-        "x": 610,
-        "y": 300,
-        "wires": []
-    },
-    {
-        "id": "2797ff6f467da748",
-        "type": "change",
-        "z": "9ab91bb2.9ce5d8",
-        "name": "",
-        "rules": [
-            {
-                "t": "set",
-                "p": "payload",
-                "pt": "msg",
-                "to": "requisição",
-                "tot": "str"
-            }
-        ],
-        "action": "",
-        "property": "",
-        "from": "",
-        "to": "",
-        "reg": false,
-        "x": 530,
-        "y": 260,
+        "url": "/page",
+        "method": "get",
+        "upload": false,
+        "swaggerDoc": "",
+        "x": 220,
+        "y": 120,
         "wires": [
             [
-                "e44e3290cc489702"
+                "8f7f5ff2eed55565"
             ]
         ]
+    },
+    {
+        "id": "8f7f5ff2eed55565",
+        "type": "template",
+        "z": "9ab91bb2.9ce5d8",
+        "name": "",
+        "field": "payload",
+        "fieldType": "msg",
+        "format": "handlebars",
+        "syntax": "mustache",
+        "template": "<h1>Hello world in HTML!</h1>",
+        "output": "str",
+        "x": 360,
+        "y": 120,
+        "wires": [
+            [
+                "6c9d9d2f6c16ca7f"
+            ]
+        ]
+    },
+    {
+        "id": "6c9d9d2f6c16ca7f",
+        "type": "http response",
+        "z": "9ab91bb2.9ce5d8",
+        "name": "",
+        "statusCode": "",
+        "headers": {},
+        "x": 490,
+        "y": 120,
+        "wires": []
     }
 ]
