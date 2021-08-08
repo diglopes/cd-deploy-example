@@ -7,6 +7,264 @@
         "info": ""
     },
     {
+        "id": "ba8ea96b2f3575c6",
+        "type": "tab",
+        "label": "To-do App",
+        "disabled": false,
+        "info": ""
+    },
+    {
+        "id": "02fabe8c593810b9",
+        "type": "subflow",
+        "name": "authentication",
+        "info": "",
+        "category": "",
+        "in": [
+            {
+                "x": 80,
+                "y": 200,
+                "wires": [
+                    {
+                        "id": "32a28d3aa2dd8718"
+                    }
+                ]
+            }
+        ],
+        "out": [
+            {
+                "x": 940,
+                "y": 240,
+                "wires": [
+                    {
+                        "id": "d7342aaca70a1efa",
+                        "port": 0
+                    },
+                    {
+                        "id": "429c46b844d9fe11",
+                        "port": 0
+                    },
+                    {
+                        "id": "44c3cc789acb8ff3",
+                        "port": 0
+                    }
+                ]
+            }
+        ],
+        "env": [
+            {
+                "name": "ACTION",
+                "type": "str",
+                "value": "login",
+                "ui": {
+                    "icon": "font-awesome/fa-align-justify",
+                    "label": {
+                        "en-US": "Action"
+                    },
+                    "type": "select",
+                    "opts": {
+                        "opts": [
+                            {
+                                "l": {
+                                    "en-US": "Login"
+                                },
+                                "v": "login"
+                            },
+                            {
+                                "l": {
+                                    "en-US": "Logout"
+                                },
+                                "v": "logout"
+                            }
+                        ]
+                    }
+                }
+            }
+        ],
+        "meta": {},
+        "color": "#FDF0C2",
+        "icon": "font-awesome/fa-user-circle-o"
+    },
+    {
+        "id": "69d73d04dfd4a3dd",
+        "type": "subflow",
+        "name": "validate auth cookie",
+        "info": "",
+        "category": "",
+        "in": [
+            {
+                "x": 80,
+                "y": 200,
+                "wires": [
+                    {
+                        "id": "4cc6f3d4a1d6935c"
+                    }
+                ]
+            }
+        ],
+        "out": [
+            {
+                "x": 680,
+                "y": 180,
+                "wires": [
+                    {
+                        "id": "a6c10dd5f590a9ed",
+                        "port": 0
+                    }
+                ]
+            },
+            {
+                "x": 520,
+                "y": 220,
+                "wires": [
+                    {
+                        "id": "f4dd2dcf548d78c7",
+                        "port": 1
+                    }
+                ]
+            }
+        ],
+        "env": [],
+        "meta": {},
+        "color": "#DDAA99"
+    },
+    {
+        "id": "099fc70ccc471c8e",
+        "type": "subflow",
+        "name": "todo controller",
+        "info": "",
+        "category": "",
+        "in": [
+            {
+                "x": 100,
+                "y": 220,
+                "wires": [
+                    {
+                        "id": "253a06ec9edc5e90"
+                    }
+                ]
+            }
+        ],
+        "out": [
+            {
+                "x": 960,
+                "y": 140,
+                "wires": [
+                    {
+                        "id": "ef3bd5cb20eb3c80",
+                        "port": 0
+                    },
+                    {
+                        "id": "c1aec2caea87ca11",
+                        "port": 0
+                    },
+                    {
+                        "id": "1ce83c0bfc46ed55",
+                        "port": 0
+                    }
+                ]
+            }
+        ],
+        "env": [
+            {
+                "name": "ACTION",
+                "type": "str",
+                "value": "LIST_ALL",
+                "ui": {
+                    "icon": "font-awesome/fa-align-justify",
+                    "label": {
+                        "en-US": "Action"
+                    },
+                    "type": "select",
+                    "opts": {
+                        "opts": [
+                            {
+                                "l": {
+                                    "en-US": "List all"
+                                },
+                                "v": "LIST_ALL"
+                            },
+                            {
+                                "l": {
+                                    "en-US": "Remove"
+                                },
+                                "v": "REMOVE"
+                            },
+                            {
+                                "l": {
+                                    "en-US": "Add"
+                                },
+                                "v": "ADD"
+                            },
+                            {
+                                "l": {
+                                    "en-US": "Change status"
+                                },
+                                "v": "CHANGE_STATUS"
+                            }
+                        ]
+                    }
+                }
+            }
+        ],
+        "meta": {},
+        "color": "#FDF0C2",
+        "icon": "font-awesome/fa-check-square-o"
+    },
+    {
+        "id": "161cc67f704f0a6d",
+        "type": "group",
+        "z": "ba8ea96b2f3575c6",
+        "name": "Authentication",
+        "style": {
+            "label": true
+        },
+        "nodes": [
+            "cbc7a4c575aa735d",
+            "b21acbdcc405533e",
+            "adafd41519818048",
+            "cc8a5ddd345f8d37",
+            "01ae191d69866f34",
+            "9d635296f6a6ee22",
+            "7349724a957dfd10",
+            "89f79d6ce3f3c7dc",
+            "92bc8af6d13ff8c7",
+            "e3c4aa0625b7a562"
+        ],
+        "x": 54,
+        "y": 39,
+        "w": 532,
+        "h": 162
+    },
+    {
+        "id": "fdbe8e1ab533d447",
+        "type": "group",
+        "z": "ba8ea96b2f3575c6",
+        "name": "To-do",
+        "style": {
+            "label": true
+        },
+        "nodes": [
+            "b094f5dfb4848e7d",
+            "e45ff8e9228797df",
+            "aa1e3f1de7c836e4",
+            "2741d56007ea34ba",
+            "c6579f6060d380b1",
+            "c26c319f75aa50e8",
+            "6189409cc12afc28",
+            "11fa9e660cbac007",
+            "8705b22c284c49a9",
+            "da573ca6935f67f6",
+            "b24f2ef1288c480b",
+            "e031dcbeaff85d26",
+            "9206d6b1fa14a364",
+            "9fd4e416dc5bb497"
+        ],
+        "x": 54,
+        "y": 219,
+        "w": 832,
+        "h": 202
+    },
+    {
         "id": "eb177b7a3a450978",
         "type": "log-elk-logger",
         "name": "",
@@ -248,6 +506,1052 @@
         "headers": {},
         "x": 490,
         "y": 120,
+        "wires": []
+    },
+    {
+        "id": "9341100a27d86ef3",
+        "type": "change",
+        "z": "02fabe8c593810b9",
+        "name": "set cookie",
+        "rules": [
+            {
+                "t": "set",
+                "p": "cookies.todo_session.value",
+                "pt": "msg",
+                "to": "$toMillis($now())",
+                "tot": "jsonata"
+            },
+            {
+                "t": "set",
+                "p": "cookies.todo_session.maxAge",
+                "pt": "msg",
+                "to": "900000",
+                "tot": "str"
+            }
+        ],
+        "action": "",
+        "property": "",
+        "from": "",
+        "to": "",
+        "reg": false,
+        "x": 520,
+        "y": 120,
+        "wires": [
+            [
+                "179edaf5a68cbb72"
+            ]
+        ]
+    },
+    {
+        "id": "429c46b844d9fe11",
+        "type": "change",
+        "z": "02fabe8c593810b9",
+        "name": "redirect",
+        "rules": [
+            {
+                "t": "set",
+                "p": "headers.Location",
+                "pt": "msg",
+                "to": "/todos",
+                "tot": "str"
+            },
+            {
+                "t": "set",
+                "p": "statusCode",
+                "pt": "msg",
+                "to": "303",
+                "tot": "str"
+            }
+        ],
+        "action": "",
+        "property": "",
+        "from": "",
+        "to": "",
+        "reg": false,
+        "x": 820,
+        "y": 120,
+        "wires": [
+            []
+        ]
+    },
+    {
+        "id": "179edaf5a68cbb72",
+        "type": "function",
+        "z": "02fabe8c593810b9",
+        "name": "set session",
+        "func": "const sessions = global.get('sessions')\nconst sessionId = msg.cookies.todo_session.value\nconst { email } = msg.payload\n\nif (sessions){\n    sessions[sessionId] = { email }\n} else {\n    const sessionObj = {}\n    sessionObj[sessionId] = { email }\n    global.set(\"sessions\", sessionObj)\n}\n\nreturn msg;",
+        "outputs": 1,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 670,
+        "y": 120,
+        "wires": [
+            [
+                "429c46b844d9fe11"
+            ]
+        ]
+    },
+    {
+        "id": "e85208878e5db6a6",
+        "type": "switch",
+        "z": "02fabe8c593810b9",
+        "name": "",
+        "property": "$globalContext('users')[email=$$.payload.email and pass=$$.payload.pass]",
+        "propertyType": "jsonata",
+        "rules": [
+            {
+                "t": "nnull"
+            },
+            {
+                "t": "else"
+            }
+        ],
+        "checkall": "true",
+        "repair": false,
+        "outputs": 2,
+        "x": 350,
+        "y": 140,
+        "wires": [
+            [
+                "9341100a27d86ef3"
+            ],
+            [
+                "d7342aaca70a1efa"
+            ]
+        ]
+    },
+    {
+        "id": "d7342aaca70a1efa",
+        "type": "change",
+        "z": "02fabe8c593810b9",
+        "name": "redirect",
+        "rules": [
+            {
+                "t": "set",
+                "p": "headers.Location",
+                "pt": "msg",
+                "to": "/login?authError=true",
+                "tot": "str"
+            },
+            {
+                "t": "set",
+                "p": "statusCode",
+                "pt": "msg",
+                "to": "303",
+                "tot": "str"
+            }
+        ],
+        "action": "",
+        "property": "",
+        "from": "",
+        "to": "",
+        "reg": false,
+        "x": 520,
+        "y": 180,
+        "wires": [
+            []
+        ]
+    },
+    {
+        "id": "32a28d3aa2dd8718",
+        "type": "switch",
+        "z": "02fabe8c593810b9",
+        "name": "action",
+        "property": "ACTION",
+        "propertyType": "env",
+        "rules": [
+            {
+                "t": "eq",
+                "v": "login",
+                "vt": "str"
+            },
+            {
+                "t": "eq",
+                "v": "logout",
+                "vt": "str"
+            }
+        ],
+        "checkall": "false",
+        "repair": false,
+        "outputs": 2,
+        "x": 190,
+        "y": 200,
+        "wires": [
+            [
+                "e85208878e5db6a6"
+            ],
+            [
+                "e63d7869c4f91cfd"
+            ]
+        ]
+    },
+    {
+        "id": "e63d7869c4f91cfd",
+        "type": "change",
+        "z": "02fabe8c593810b9",
+        "name": "delete cookie",
+        "rules": [
+            {
+                "t": "delete",
+                "p": "sessions[msg.req.cookies.todo_session]",
+                "pt": "global"
+            },
+            {
+                "t": "set",
+                "p": "cookies.todo_session",
+                "pt": "msg",
+                "to": "null",
+                "tot": "json"
+            }
+        ],
+        "action": "",
+        "property": "",
+        "from": "",
+        "to": "",
+        "reg": false,
+        "x": 370,
+        "y": 240,
+        "wires": [
+            [
+                "44c3cc789acb8ff3"
+            ]
+        ]
+    },
+    {
+        "id": "44c3cc789acb8ff3",
+        "type": "change",
+        "z": "02fabe8c593810b9",
+        "name": "redirect",
+        "rules": [
+            {
+                "t": "set",
+                "p": "headers.Location",
+                "pt": "msg",
+                "to": "/login",
+                "tot": "str"
+            },
+            {
+                "t": "set",
+                "p": "statusCode",
+                "pt": "msg",
+                "to": "303",
+                "tot": "str"
+            }
+        ],
+        "action": "",
+        "property": "",
+        "from": "",
+        "to": "",
+        "reg": false,
+        "x": 540,
+        "y": 240,
+        "wires": [
+            []
+        ]
+    },
+    {
+        "id": "f4dd2dcf548d78c7",
+        "type": "switch",
+        "z": "69d73d04dfd4a3dd",
+        "name": "cookie check",
+        "property": "session",
+        "propertyType": "msg",
+        "rules": [
+            {
+                "t": "nnull"
+            },
+            {
+                "t": "else"
+            }
+        ],
+        "checkall": "false",
+        "repair": false,
+        "outputs": 2,
+        "x": 370,
+        "y": 200,
+        "wires": [
+            [
+                "a6c10dd5f590a9ed"
+            ],
+            []
+        ]
+    },
+    {
+        "id": "4cc6f3d4a1d6935c",
+        "type": "change",
+        "z": "69d73d04dfd4a3dd",
+        "name": "set cookie id",
+        "rules": [
+            {
+                "t": "set",
+                "p": "cookieId",
+                "pt": "msg",
+                "to": "req.cookies.todo_session",
+                "tot": "msg"
+            },
+            {
+                "t": "set",
+                "p": "session",
+                "pt": "msg",
+                "to": "sessions[msg.cookieId]",
+                "tot": "global"
+            }
+        ],
+        "action": "",
+        "property": "",
+        "from": "",
+        "to": "",
+        "reg": false,
+        "x": 210,
+        "y": 200,
+        "wires": [
+            [
+                "f4dd2dcf548d78c7"
+            ]
+        ]
+    },
+    {
+        "id": "a6c10dd5f590a9ed",
+        "type": "change",
+        "z": "69d73d04dfd4a3dd",
+        "name": "set user",
+        "rules": [
+            {
+                "t": "set",
+                "p": "user",
+                "pt": "msg",
+                "to": "$globalContext(\"users\")[email=$$.session.email]",
+                "tot": "jsonata"
+            }
+        ],
+        "action": "",
+        "property": "",
+        "from": "",
+        "to": "",
+        "reg": false,
+        "x": 560,
+        "y": 180,
+        "wires": [
+            []
+        ]
+    },
+    {
+        "id": "ef3bd5cb20eb3c80",
+        "type": "change",
+        "z": "099fc70ccc471c8e",
+        "name": "list todos",
+        "rules": [
+            {
+                "t": "set",
+                "p": "todos",
+                "pt": "msg",
+                "to": "user.todos",
+                "tot": "msg"
+            }
+        ],
+        "action": "",
+        "property": "",
+        "from": "",
+        "to": "",
+        "reg": false,
+        "x": 600,
+        "y": 60,
+        "wires": [
+            []
+        ]
+    },
+    {
+        "id": "77c7f42d4acc15e1",
+        "type": "switch",
+        "z": "099fc70ccc471c8e",
+        "name": "action",
+        "property": "ACTION",
+        "propertyType": "env",
+        "rules": [
+            {
+                "t": "eq",
+                "v": "LIST_ALL",
+                "vt": "str"
+            },
+            {
+                "t": "eq",
+                "v": "REMOVE",
+                "vt": "str"
+            },
+            {
+                "t": "eq",
+                "v": "ADD",
+                "vt": "str"
+            },
+            {
+                "t": "eq",
+                "v": "CHANGE_STATUS",
+                "vt": "str"
+            }
+        ],
+        "checkall": "false",
+        "repair": false,
+        "outputs": 4,
+        "x": 430,
+        "y": 120,
+        "wires": [
+            [
+                "ef3bd5cb20eb3c80"
+            ],
+            [
+                "cf1e55c39ec0648d"
+            ],
+            [
+                "0bac448126a19454"
+            ],
+            [
+                "33d022bcb4282e73"
+            ]
+        ]
+    },
+    {
+        "id": "c1aec2caea87ca11",
+        "type": "change",
+        "z": "099fc70ccc471c8e",
+        "name": "redirect",
+        "rules": [
+            {
+                "t": "set",
+                "p": "headers.Location",
+                "pt": "msg",
+                "to": "/todos",
+                "tot": "str"
+            },
+            {
+                "t": "set",
+                "p": "statusCode",
+                "pt": "msg",
+                "to": "303",
+                "tot": "str"
+            }
+        ],
+        "action": "",
+        "property": "",
+        "from": "",
+        "to": "",
+        "reg": false,
+        "x": 800,
+        "y": 140,
+        "wires": [
+            []
+        ]
+    },
+    {
+        "id": "1ce83c0bfc46ed55",
+        "type": "change",
+        "z": "099fc70ccc471c8e",
+        "name": "login redirect",
+        "rules": [
+            {
+                "t": "set",
+                "p": "headers.Location",
+                "pt": "msg",
+                "to": "/login",
+                "tot": "str"
+            },
+            {
+                "t": "set",
+                "p": "statusCode",
+                "pt": "msg",
+                "to": "303",
+                "tot": "str"
+            }
+        ],
+        "action": "",
+        "property": "",
+        "from": "",
+        "to": "",
+        "reg": false,
+        "x": 610,
+        "y": 240,
+        "wires": [
+            []
+        ]
+    },
+    {
+        "id": "253a06ec9edc5e90",
+        "type": "subflow:69d73d04dfd4a3dd",
+        "z": "099fc70ccc471c8e",
+        "name": "",
+        "env": [],
+        "x": 250,
+        "y": 220,
+        "wires": [
+            [
+                "77c7f42d4acc15e1"
+            ],
+            [
+                "1ce83c0bfc46ed55"
+            ]
+        ]
+    },
+    {
+        "id": "0bac448126a19454",
+        "type": "function",
+        "z": "099fc70ccc471c8e",
+        "name": "add todo",
+        "func": "const todo = {\n    id: Math.ceil(Math.random() * 5000),\n    title: msg.payload.task,\n    done: false\n}\nconst users = global\n    .get(\"users\")\n    .map(user => {\n        if(user.email === msg.user.email){\n            user.todos.unshift(todo)\n        }\n        return user\n    })\n    \nglobal.set(\"users\", users)\n\nreturn msg;",
+        "outputs": 1,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 600,
+        "y": 140,
+        "wires": [
+            [
+                "c1aec2caea87ca11"
+            ]
+        ]
+    },
+    {
+        "id": "cf1e55c39ec0648d",
+        "type": "function",
+        "z": "099fc70ccc471c8e",
+        "name": "remove todo",
+        "func": "const todo = {\n    id: Math.ceil(Math.random() * 5000),\n    title: msg.payload.task,\n    done: false\n}\nconst users = global\n    .get(\"users\")\n    .map(user => {\n        if(user.email === msg.user.email){\n            user.todos = user\n                .todos\n                .filter(todo => todo.id != msg.payload.todoId)\n        }\n        return user\n    })\n    \nglobal.set(\"users\", users)\n\nreturn msg;",
+        "outputs": 1,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 610,
+        "y": 100,
+        "wires": [
+            [
+                "c1aec2caea87ca11"
+            ]
+        ]
+    },
+    {
+        "id": "33d022bcb4282e73",
+        "type": "function",
+        "z": "099fc70ccc471c8e",
+        "name": "change status",
+        "func": "const todo = {\n    id: Math.ceil(Math.random() * 5000),\n    title: msg.payload.task,\n    done: false\n}\nconst users = global\n    .get(\"users\")\n    .map(user => {\n        if(user.email === msg.user.email){\n            user.todos = user\n                .todos\n                .map(todo => {\n                    if(todo.id == msg.payload.todoId) {\n                        todo.done = !todo.done\n                    }\n                    return todo\n                })\n        }\n        return user\n    })\n    \nglobal.set(\"users\", users)\n\nreturn msg;",
+        "outputs": 1,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 620,
+        "y": 180,
+        "wires": [
+            [
+                "c1aec2caea87ca11"
+            ]
+        ]
+    },
+    {
+        "id": "b094f5dfb4848e7d",
+        "type": "http in",
+        "z": "ba8ea96b2f3575c6",
+        "g": "fdbe8e1ab533d447",
+        "name": "",
+        "url": "/todos",
+        "method": "get",
+        "upload": false,
+        "swaggerDoc": "",
+        "x": 140,
+        "y": 260,
+        "wires": [
+            [
+                "b24f2ef1288c480b"
+            ]
+        ]
+    },
+    {
+        "id": "e45ff8e9228797df",
+        "type": "http response",
+        "z": "ba8ea96b2f3575c6",
+        "g": "fdbe8e1ab533d447",
+        "name": "",
+        "statusCode": "",
+        "headers": {},
+        "x": 810,
+        "y": 260,
+        "wires": []
+    },
+    {
+        "id": "aa1e3f1de7c836e4",
+        "type": "http in",
+        "z": "ba8ea96b2f3575c6",
+        "g": "fdbe8e1ab533d447",
+        "name": "",
+        "url": "/todos/add",
+        "method": "post",
+        "upload": false,
+        "swaggerDoc": "",
+        "x": 160,
+        "y": 300,
+        "wires": [
+            [
+                "9206d6b1fa14a364"
+            ]
+        ]
+    },
+    {
+        "id": "2741d56007ea34ba",
+        "type": "http response",
+        "z": "ba8ea96b2f3575c6",
+        "g": "fdbe8e1ab533d447",
+        "name": "",
+        "statusCode": "",
+        "headers": {},
+        "x": 570,
+        "y": 300,
+        "wires": []
+    },
+    {
+        "id": "c6579f6060d380b1",
+        "type": "http in",
+        "z": "ba8ea96b2f3575c6",
+        "g": "fdbe8e1ab533d447",
+        "name": "",
+        "url": "/todos/delete",
+        "method": "post",
+        "upload": false,
+        "swaggerDoc": "",
+        "x": 170,
+        "y": 340,
+        "wires": [
+            [
+                "e031dcbeaff85d26"
+            ]
+        ]
+    },
+    {
+        "id": "c26c319f75aa50e8",
+        "type": "http response",
+        "z": "ba8ea96b2f3575c6",
+        "g": "fdbe8e1ab533d447",
+        "name": "",
+        "statusCode": "",
+        "headers": {},
+        "x": 570,
+        "y": 340,
+        "wires": []
+    },
+    {
+        "id": "6189409cc12afc28",
+        "type": "http in",
+        "z": "ba8ea96b2f3575c6",
+        "g": "fdbe8e1ab533d447",
+        "name": "",
+        "url": "/todos/change_status",
+        "method": "post",
+        "upload": false,
+        "swaggerDoc": "",
+        "x": 200,
+        "y": 380,
+        "wires": [
+            [
+                "9fd4e416dc5bb497"
+            ]
+        ]
+    },
+    {
+        "id": "11fa9e660cbac007",
+        "type": "http response",
+        "z": "ba8ea96b2f3575c6",
+        "g": "fdbe8e1ab533d447",
+        "name": "",
+        "statusCode": "",
+        "headers": {},
+        "x": 570,
+        "y": 380,
+        "wires": []
+    },
+    {
+        "id": "8705b22c284c49a9",
+        "type": "template",
+        "z": "ba8ea96b2f3575c6",
+        "g": "fdbe8e1ab533d447",
+        "name": "html",
+        "field": "payload",
+        "fieldType": "msg",
+        "format": "html",
+        "syntax": "mustache",
+        "template": "<!doctype html>\n<html lang=\"en\">\n\n<head>\n    <meta charset=\"utf-8\">\n    <meta name=\"viewport\" content=\"width=device-width, initial-scale=1\">\n    <meta name=\"description\" content=\"\">\n    <title>Todo APP</title>\n\n    <link href=\"https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css\" rel=\"stylesheet\"\n        integrity=\"sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC\" crossorigin=\"anonymous\">\n    <style>{{css}}</style>\n</head>\n\n<body class=\"text-center\">\n    <header>\n        <nav class=\"navbar navbar-dark bg-dark\">\n            <div class=\"container d-flex justify-content-end\">\n                <form class=\"\" action=\"/logout\" method=\"POST\">\n                    <button type=\"submit\" class=\"btn btn-secondary\">Logout</button>\n                </form>\n            </div>\n        </nav>\n    </header>\n    <main class=\"form-signin container-fluid\">\n        <form class=\"row py-5 justify-content-center banner\" action=\"/todos/add\" method=\"POST\">\n            <h1 class=\"mb-3 mt-5\">Todo APP</h1>\n            <div class=\"col-5 p-0\">\n                <input name=\"task\" type=\"text\" class=\"form-control\" id=\"task-input\" aria-describedby=\"taskField\">\n            </div>\n            <button type=\"submit\" class=\"col-1 btn btn-primary\">+</button>\n        </form>\n \n        <ul class=\"list-group row mt-3 d-flex flex-column align-items-center\">\n            {{#todos}}\n            <li class=\"list-group-item col d-flex justify-content-between w-50\">\n                {{#done}}<span class=\"todo-done\" >{{title}}</span>{{/done}}\n                {{^done}}<span>{{title}}</span>{{/done}}\n                <div class=\"d-flex\">\n                    <form action=\"/todos/change_status\" method=\"POST\" class=\"me-2 d-inline-block\">\n                        <input type=\"hidden\" name=\"todoId\" value=\"{{id}}\"></input>\n                        <input type=\"hidden\" name=\"done\" value=\"{{done}}\"></input>\n                        {{#done}}\n                        <button class=\"btn btn-sm btn-warning\">Undone</button>\n                        {{/done}}\n                        {{^done}}\n                        <button class=\"btn btn-sm btn-success\">Done</button>\n                        {{/done}}\n                    </form>\n                    <form action=\"/todos/delete\" method=\"POST\">\n                        <input type=\"hidden\" name=\"todoId\" value=\"{{id}}\"></input>\n                        <button class=\"btn btn-sm btn-danger\">Delete</button>\n                    </form>\n                </div>\n            </li>\n            {{/todos}}\n        </ul>\n    </main>\n    <script src=\"https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js\"\n        integrity=\"sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM\" crossorigin=\"anonymous\">\n    </script>\n</body>\n</html>",
+        "output": "str",
+        "x": 690,
+        "y": 260,
+        "wires": [
+            [
+                "e45ff8e9228797df"
+            ]
+        ]
+    },
+    {
+        "id": "da573ca6935f67f6",
+        "type": "template",
+        "z": "ba8ea96b2f3575c6",
+        "g": "fdbe8e1ab533d447",
+        "name": "css",
+        "field": "css",
+        "fieldType": "msg",
+        "format": "css",
+        "syntax": "mustache",
+        "template": ".banner {\n    background-color: #f2f2f2;\n}\n\n.todo-done {\n    text-decoration: line-through; \n    color: grey;\n}",
+        "output": "str",
+        "x": 570,
+        "y": 260,
+        "wires": [
+            [
+                "8705b22c284c49a9"
+            ]
+        ]
+    },
+    {
+        "id": "b24f2ef1288c480b",
+        "type": "subflow:099fc70ccc471c8e",
+        "z": "ba8ea96b2f3575c6",
+        "g": "fdbe8e1ab533d447",
+        "name": "",
+        "env": [],
+        "x": 420,
+        "y": 260,
+        "wires": [
+            [
+                "da573ca6935f67f6"
+            ]
+        ]
+    },
+    {
+        "id": "e031dcbeaff85d26",
+        "type": "subflow:099fc70ccc471c8e",
+        "z": "ba8ea96b2f3575c6",
+        "g": "fdbe8e1ab533d447",
+        "name": "",
+        "env": [
+            {
+                "name": "ACTION",
+                "value": "REMOVE",
+                "type": "str"
+            }
+        ],
+        "x": 420,
+        "y": 340,
+        "wires": [
+            [
+                "c26c319f75aa50e8"
+            ]
+        ]
+    },
+    {
+        "id": "9206d6b1fa14a364",
+        "type": "subflow:099fc70ccc471c8e",
+        "z": "ba8ea96b2f3575c6",
+        "g": "fdbe8e1ab533d447",
+        "name": "",
+        "env": [
+            {
+                "name": "ACTION",
+                "value": "ADD",
+                "type": "str"
+            }
+        ],
+        "x": 420,
+        "y": 300,
+        "wires": [
+            [
+                "2741d56007ea34ba"
+            ]
+        ]
+    },
+    {
+        "id": "9fd4e416dc5bb497",
+        "type": "subflow:099fc70ccc471c8e",
+        "z": "ba8ea96b2f3575c6",
+        "g": "fdbe8e1ab533d447",
+        "name": "",
+        "env": [
+            {
+                "name": "ACTION",
+                "value": "CHANGE_STATUS",
+                "type": "str"
+            }
+        ],
+        "x": 420,
+        "y": 380,
+        "wires": [
+            [
+                "11fa9e660cbac007"
+            ]
+        ]
+    },
+    {
+        "id": "cbc7a4c575aa735d",
+        "type": "http in",
+        "z": "ba8ea96b2f3575c6",
+        "g": "161cc67f704f0a6d",
+        "name": "",
+        "url": "/login",
+        "method": "get",
+        "upload": false,
+        "swaggerDoc": "",
+        "x": 140,
+        "y": 80,
+        "wires": [
+            [
+                "cc8a5ddd345f8d37"
+            ]
+        ]
+    },
+    {
+        "id": "b21acbdcc405533e",
+        "type": "template",
+        "z": "ba8ea96b2f3575c6",
+        "g": "161cc67f704f0a6d",
+        "name": "html",
+        "field": "payload",
+        "fieldType": "msg",
+        "format": "html",
+        "syntax": "mustache",
+        "template": "<!doctype html>\n<html lang=\"en\">\n\n<head>\n    <meta charset=\"utf-8\">\n    <meta name=\"viewport\" content=\"width=device-width, initial-scale=1\">\n    <meta name=\"description\" content=\"\">\n    <meta name=\"author\" content=\"Mark Otto, Jacob Thornton, and Bootstrap contributors\">\n    <meta name=\"generator\" content=\"Hugo 0.84.0\">\n    <title>Signin Template · Bootstrap v5.0</title>\n\n    <link href=\"https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css\" rel=\"stylesheet\"\n        integrity=\"sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC\" crossorigin=\"anonymous\">\n\n\n    <style>{{css}}</style>\n\n    <style>\n        .bd-placeholder-img {\n            font-size: 1.125rem;\n            text-anchor: middle;\n            -webkit-user-select: none;\n            -moz-user-select: none;\n            user-select: none;\n        }\n\n        @media (min-width: 768px) {\n            .bd-placeholder-img-lg {\n                font-size: 3.5rem;\n            }\n        }\n    </style>\n</head>\n\n<body class=\"text-center\">\n\n    <main class=\"form-signin\">\n        <form action=\"/authentication\" method=\"POST\">\n            <h1 class=\"h3 mb-3 fw-normal\">Please sign in</h1>\n\n            <div class=\"form-floating mb-3\">\n                <input type=\"email\" name=\"email\" class=\"form-control\" id=\"floatingInput\" placeholder=\"name@example.com\">\n                <label for=\"floatingInput\">Email address</label>\n            </div>\n            <div class=\"form-floating\">\n                <input type=\"password\" name=\"pass\"\" class=\"form-control\" id=\"floatingPassword\" placeholder=\"Password\">\n                <label for=\"floatingPassword\">Password</label>\n            </div>\n\n            <div class=\"checkbox mb-3\">\n                <label>\n      </label>\n            </div>\n            <button class=\"w-100 btn btn-lg btn-primary\" type=\"submit\">Sign in</button>\n        </form>\n    </main>\n\n\n    <script src=\"https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js\"\n        integrity=\"sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM\" crossorigin=\"anonymous\">\n    </script>\n</body>\n\n</html>",
+        "output": "str",
+        "x": 390,
+        "y": 80,
+        "wires": [
+            [
+                "adafd41519818048"
+            ]
+        ]
+    },
+    {
+        "id": "adafd41519818048",
+        "type": "http response",
+        "z": "ba8ea96b2f3575c6",
+        "g": "161cc67f704f0a6d",
+        "name": "",
+        "statusCode": "",
+        "headers": {},
+        "x": 510,
+        "y": 80,
+        "wires": []
+    },
+    {
+        "id": "cc8a5ddd345f8d37",
+        "type": "template",
+        "z": "ba8ea96b2f3575c6",
+        "g": "161cc67f704f0a6d",
+        "name": "css",
+        "field": "css",
+        "fieldType": "msg",
+        "format": "css",
+        "syntax": "mustache",
+        "template": "html,\nbody {\n  height: 100%;\n}\n\nbody {\n  display: flex;\n  align-items: center;\n  padding-top: 40px;\n  padding-bottom: 40px;\n  background-color: #f5f5f5;\n}\n\n.form-signin {\n  width: 100%;\n  max-width: 330px;\n  padding: 15px;\n  margin: auto;\n}\n\n.form-signin .checkbox {\n  font-weight: 400;\n}\n\n.form-signin .form-floating:focus-within {\n  z-index: 2;\n}\n\n.form-signin input[type=\"email\"] {\n  margin-bottom: -1px;\n  border-bottom-right-radius: 0;\n  border-bottom-left-radius: 0;\n}\n\n.form-signin input[type=\"password\"] {\n  margin-bottom: 10px;\n  border-top-left-radius: 0;\n  border-top-right-radius: 0;\n}\n",
+        "output": "str",
+        "x": 270,
+        "y": 80,
+        "wires": [
+            [
+                "b21acbdcc405533e"
+            ]
+        ]
+    },
+    {
+        "id": "01ae191d69866f34",
+        "type": "http in",
+        "z": "ba8ea96b2f3575c6",
+        "g": "161cc67f704f0a6d",
+        "name": "",
+        "url": "/authentication",
+        "method": "post",
+        "upload": false,
+        "swaggerDoc": "",
+        "x": 170,
+        "y": 120,
+        "wires": [
+            [
+                "7349724a957dfd10"
+            ]
+        ]
+    },
+    {
+        "id": "9d635296f6a6ee22",
+        "type": "http response",
+        "z": "ba8ea96b2f3575c6",
+        "g": "161cc67f704f0a6d",
+        "name": "",
+        "statusCode": "",
+        "headers": {},
+        "x": 510,
+        "y": 120,
+        "wires": []
+    },
+    {
+        "id": "aae768db0cd902a8",
+        "type": "inject",
+        "z": "ba8ea96b2f3575c6",
+        "name": "",
+        "props": [
+            {
+                "p": "payload"
+            }
+        ],
+        "repeat": "",
+        "crontab": "",
+        "once": true,
+        "onceDelay": 0.1,
+        "topic": "",
+        "payloadType": "date",
+        "x": 130,
+        "y": 460,
+        "wires": [
+            [
+                "dfc84a9eed1f9bf3"
+            ]
+        ]
+    },
+    {
+        "id": "dfc84a9eed1f9bf3",
+        "type": "change",
+        "z": "ba8ea96b2f3575c6",
+        "name": "set users",
+        "rules": [
+            {
+                "t": "set",
+                "p": "users",
+                "pt": "global",
+                "to": "[{\"email\":\"diego@email.com\",\"pass\":\"123456\",\"todos\":[]},{\"email\":\"joao@email.com\",\"pass\":\"123456\",\"todos\":[]}]",
+                "tot": "json"
+            }
+        ],
+        "action": "",
+        "property": "",
+        "from": "",
+        "to": "",
+        "reg": false,
+        "x": 280,
+        "y": 460,
+        "wires": [
+            []
+        ]
+    },
+    {
+        "id": "7349724a957dfd10",
+        "type": "subflow:02fabe8c593810b9",
+        "z": "ba8ea96b2f3575c6",
+        "g": "161cc67f704f0a6d",
+        "name": "",
+        "env": [],
+        "x": 360,
+        "y": 120,
+        "wires": [
+            [
+                "9d635296f6a6ee22"
+            ]
+        ]
+    },
+    {
+        "id": "9e01cdeb66995c2e",
+        "type": "inject",
+        "z": "ba8ea96b2f3575c6",
+        "name": "",
+        "props": [
+            {
+                "p": "payload"
+            },
+            {
+                "p": "topic",
+                "vt": "str"
+            }
+        ],
+        "repeat": "",
+        "crontab": "",
+        "once": false,
+        "onceDelay": 0.1,
+        "topic": "",
+        "payload": "",
+        "payloadType": "date",
+        "x": 120,
+        "y": 500,
+        "wires": [
+            [
+                "24c53c637aadf5fc"
+            ]
+        ]
+    },
+    {
+        "id": "24c53c637aadf5fc",
+        "type": "change",
+        "z": "ba8ea96b2f3575c6",
+        "name": "clear sessions",
+        "rules": [
+            {
+                "t": "delete",
+                "p": "sessions",
+                "pt": "global"
+            }
+        ],
+        "action": "",
+        "property": "",
+        "from": "",
+        "to": "",
+        "reg": false,
+        "x": 280,
+        "y": 500,
+        "wires": [
+            []
+        ]
+    },
+    {
+        "id": "89f79d6ce3f3c7dc",
+        "type": "http in",
+        "z": "ba8ea96b2f3575c6",
+        "g": "161cc67f704f0a6d",
+        "name": "",
+        "url": "/logout",
+        "method": "post",
+        "upload": false,
+        "swaggerDoc": "",
+        "x": 150,
+        "y": 160,
+        "wires": [
+            [
+                "92bc8af6d13ff8c7"
+            ]
+        ]
+    },
+    {
+        "id": "92bc8af6d13ff8c7",
+        "type": "subflow:02fabe8c593810b9",
+        "z": "ba8ea96b2f3575c6",
+        "g": "161cc67f704f0a6d",
+        "name": "",
+        "env": [
+            {
+                "name": "ACTION",
+                "value": "logout",
+                "type": "str"
+            }
+        ],
+        "x": 360,
+        "y": 160,
+        "wires": [
+            [
+                "e3c4aa0625b7a562"
+            ]
+        ]
+    },
+    {
+        "id": "e3c4aa0625b7a562",
+        "type": "http response",
+        "z": "ba8ea96b2f3575c6",
+        "g": "161cc67f704f0a6d",
+        "name": "",
+        "statusCode": "",
+        "headers": {},
+        "x": 510,
+        "y": 160,
         "wires": []
     }
 ]
