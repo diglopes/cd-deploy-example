@@ -1,24 +1,39 @@
 {
-  "name": "cd-deploy-example",
+  "name": "node-red-boilerplate",
   "version": "1.0.0",
-  "description": "",
-  "main": "index.js",
+  "description": "A boilerplate for production ready Node-RED applications",
+  "main": "lib/index.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1",
-    "start": "node index.js"
+    "start": "NODE_ENV=production node lib/index.js",
+    "dev": "nodemon lib/index.js --config= nodemon.json"
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/diglopes/cd-deploy-example.git"
+    "url": "git+https://github.com/diglopes/node-red-boilerplate.git"
   },
-  "keywords": [],
+  "keywords": [
+    "node-red",
+    "boilerplate",
+    "node",
+    "javascript",
+    "express"
+  ],
   "author": "",
   "license": "ISC",
   "bugs": {
-    "url": "https://github.com/diglopes/cd-deploy-example/issues"
+    "url": "https://github.com/diglopes/node-red-boilerplate/issues"
   },
-  "homepage": "https://github.com/diglopes/cd-deploy-example#readme",
+  "homepage": "https://github.com/diglopes/node-red-boilerplate#readme",
   "dependencies": {
-    "express": "^4.17.1"
+    "dotenv": "10.0.0",
+    "express": "4.17.1",
+    "node-red": "2.0.5",
+    "node-red-contrib-log-elk": "~1.2.3",
+    "swagger-ui-express": "4.1.6"
+  },
+  "devDependencies": {
+    "nodemon": "2.0.7",
+    "node-red-debugger": "1.1.1",
+    "nrlint": "1.0.2"
   }
 }
