@@ -4,7 +4,7 @@ const app = express()
 
 app.get("/hello", (_, res) => {
     console.log("Executing hello route")
-    res.send("Hello world, updated! 2")
+    res.send("Hello fucking world!!!")
 })
 
 const PORT = process.env.PORT || 1880
