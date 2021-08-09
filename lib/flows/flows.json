@@ -288,7 +288,7 @@
         "method": "get",
         "upload": false,
         "swaggerDoc": "",
-        "x": 180,
+        "x": 220,
         "y": 200,
         "wires": [
             [
@@ -303,7 +303,7 @@
         "name": "",
         "statusCode": "",
         "headers": {},
-        "x": 750,
+        "x": 630,
         "y": 200,
         "wires": []
     },
@@ -340,7 +340,7 @@
         "from": "",
         "to": "",
         "reg": false,
-        "x": 380,
+        "x": 360,
         "y": 200,
         "wires": [
             [
@@ -417,47 +417,6 @@
         "wires": [
             [
                 "2c1aca3611803392"
-            ]
-        ]
-    },
-    {
-        "id": "78818fdeea21a879",
-        "type": "change",
-        "z": "9ab91bb2.9ce5d8",
-        "name": "response",
-        "rules": [
-            {
-                "t": "set",
-                "p": "payload.running",
-                "pt": "msg",
-                "to": "true",
-                "tot": "bool"
-            },
-            {
-                "t": "set",
-                "p": "payload.timestamp",
-                "pt": "msg",
-                "to": "$now()",
-                "tot": "jsonata"
-            },
-            {
-                "t": "set",
-                "p": "payload.port",
-                "pt": "msg",
-                "to": "PORT",
-                "tot": "env"
-            }
-        ],
-        "action": "",
-        "property": "",
-        "from": "",
-        "to": "",
-        "reg": false,
-        "x": 560,
-        "y": 200,
-        "wires": [
-            [
-                "af5b81a5.e0df8"
             ]
         ]
     },
@@ -1553,5 +1512,53 @@
         "x": 510,
         "y": 160,
         "wires": []
+    },
+    {
+        "id": "78818fdeea21a879",
+        "type": "change",
+        "z": "9ab91bb2.9ce5d8",
+        "name": "response",
+        "rules": [
+            {
+                "t": "set",
+                "p": "payload.running",
+                "pt": "msg",
+                "to": "true",
+                "tot": "bool"
+            },
+            {
+                "t": "set",
+                "p": "payload.timestamp",
+                "pt": "msg",
+                "to": "$now()",
+                "tot": "jsonata"
+            },
+            {
+                "t": "set",
+                "p": "payload.port",
+                "pt": "msg",
+                "to": "PORT",
+                "tot": "env"
+            },
+            {
+                "t": "set",
+                "p": "payload.teste",
+                "pt": "msg",
+                "to": "123",
+                "tot": "str"
+            }
+        ],
+        "action": "",
+        "property": "",
+        "from": "",
+        "to": "",
+        "reg": false,
+        "x": 500,
+        "y": 200,
+        "wires": [
+            [
+                "af5b81a5.e0df8"
+            ]
+        ]
     }
 ]
